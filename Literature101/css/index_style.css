@@ -1,0 +1,126 @@
+.body {
+    max-width: screen:width;
+    margin: 0;
+	padding: 0;
+    height: 100%;
+}
+
+.banner h1 {
+	font-size:130px;
+    font-size: 6.8vw;
+    text-shadow: 4px 5px #fd8a17;
+    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+    /*font-family: 'Lucida Handwriting Italic';*/
+    font-weight: bolder;
+    color: white;
+}
+
+.banner .container {
+    background-image: url('../Images/banner_blue.jpg');
+    background-size:contain;
+    width:inherit;
+    height: 19%
+    }
+
+.topBar  {
+    /*background-color: #fd8a17;*/
+    height: 6%;
+    width: screen.width;
+    z-index: +1;
+}
+
+.navTop {
+    z-index: +5;
+    width: screen.width;
+}
+
+.searchIcon{
+    position:absolute;
+    left: 0.5%;
+    top: 20%;
+    z-index: +1
+}
+
+.Search{
+    opacity: 0;
+
+}
+.navUser {
+    float: right;
+    position: relative;
+    top: 3px;
+    
+}
+
+.navUser a {
+    
+    padding: 4px !important;
+}
+
+.searchField {
+    position: relative;
+    float: left;
+    top: 1%;
+    left: 2%;
+    z-index: 2;
+}
+
+.searchField p {
+        font-weight:bold;
+    color: white;
+}
+
+.search input {
+    width: 170px;
+    color: red;
+    background-color: black;
+}
+
+.navLeft {
+    background-color: rgb(34,99,178);
+    width: 250px;
+    border-right-style: solid;
+    border-width: 5px;
+}
+.navLeft li {
+    float: left;
+    clear: left;
+    position: relative;
+    top: 100px;
+    background-color: 
+}
+.navLeft a {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.content {
+    position: absolute;
+    left: 280px;
+    top: 250px;
+    width: 1150px;
+}
+
+    iframe {
+    position: static;
+    top: 15px;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #fd8a17;
+}
+
+.myFooter {
+    background-color: #444444 !important;
+    position: relative;
+    bottom: 0px;
+    height: 60px;
+    color: white;
+}
+
+.myFooter a {
+    position: absolute;
+    left: 90%;
+    bottom: 20%;
+    font-weight: bold;
+}

@@ -1,0 +1,141 @@
+body {
+    background-color: #444444;
+}
+
+.userFormContainer {
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fd8a17;
+    background: rgb(250,250,250);
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10%;
+    font-weight: bold
+}
+
+.userForm {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.formMsg {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.formHeader {
+    margin: 0;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#successMsg {
+    top: 5%;
+    border-style: solid;
+    border-color: #fd8a17;
+    visibility: hidden;
+}
+
+ #deviceFormContainer {
+     width: 1000px;
+     height: 800px;
+ }
+
+#homeLink {
+    
+    margin: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #0099FF;
+    font-weight: 900;
+}
+#registerLink {
+    
+    margin: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #0099FF;
+    font-weight: 900;
+}
+
+select {
+    padding:5px;
+    border:2px solid #0099FF; 
+    border-radius: 5px;
+}
+select:focus {
+    border-color:#fd8a17; 
+}
+
+.userForm input{
+    padding:5px 8px;
+    margin-bottom: 5px;
+    display: list-item;
+    padding:5px;
+    border:2px solid #0099FF; 
+    border-radius: 5px;
+}
+.userForm input[type=text]:focus {
+    border-color:#fd8a17; 
+}
+
+.userForm textarea {
+        padding:5px 8px;
+    margin-bottom: 5px;
+    display: list-item;
+    padding:5px;
+    border:2px solid #0099FF; 
+    border-radius: 5px;
+}
+.userForm textarea:focus {
+    border-color:#fd8a17; 
+}
+
+
+.userForm input[type=submit] {
+    padding:5px 15px;
+    background:#fd8a17;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #F8F8F8;
+    font-weight: bold;
+}
+
+.deleteForm input[type=submit] {
+    padding:5px 15px;
+    background:#FF3300;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #F8F8F8;
+    font-weight: bold;
+    position: absolute;
+    bottom:19.2%;
+    right: 13.3%;
+}
