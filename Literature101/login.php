@@ -7,7 +7,7 @@ $error = "";
 $username = "";
 $password = "";
 
-//check to see if they've submitted the login form
+// Check to see if they've submitted the login form
 if(isset($_POST['submit-login'])) { 
 
 	$username = $_POST['username'];
@@ -15,7 +15,7 @@ if(isset($_POST['submit-login'])) {
 
 	$userTools = new UserTools();
 	if($userTools->login($username, $password)){ 
-		//successful login, redirect them to a page
+		// Successful login, redirect them to a page
 		header("Location: index.php");
 	}else{
 		$error = "Incorrect username or password. Please try again.";
@@ -29,7 +29,7 @@ if(isset($_POST['submit-login'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/formPageStyle.css">
+    <link href="formPageStyle.css" rel="stylesheet">
 </head>
 <body>
     <div class=userFormContainer>

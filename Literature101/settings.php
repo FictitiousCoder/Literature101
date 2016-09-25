@@ -2,25 +2,25 @@
 
 require_once 'includes/global.inc.php';
 
-//Check to see if they're logged in
+// Check to see if they're logged in
 if(!isset($_SESSION['logged_in'])) {
 	header("Location: login.php");
 }
 
-//Get the user object from the session
+// Get the user object from the session
 $user = unserialize($_SESSION['user']);
 
-//Initialize php variables used in the form
+// Initialize php variables used in the form
 $email = $user->email;
 $message = "";
 
-//Check to see that the form has been submitted
+// Check to see that the form has been submitted
 if(isset($_POST['submit-settings'])) { 
 
-    //Retrieve the $_POST variables
+    // Retrieve the $_POST variables
 	$email = $_POST['email'];
     
-    //Check to see if email already exists.
+    // Check to see if email already exists.
 	if($userTools->checkEmailExists($email))
 	{
 	    $message = "That e-mail is already registered.<br/>";
@@ -35,8 +35,8 @@ if(isset($_POST['submit-settings'])) {
 
 }
 
-//If the form wasn't submitted, or didn't validate
-//then we show the registration form again
+/*If the form wasn't submitted, or didn't validate
+then we show the registration form again*/
 ?>
 
 
@@ -46,7 +46,7 @@ if(isset($_POST['submit-settings'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/formPageStyle.css">
+    <link href="formPageStyle.css" rel="stylesheet">
 </head>
 <body>
     <div class=userFormContainer>

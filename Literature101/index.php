@@ -17,11 +17,11 @@ $deviceTools = new DeviceTools();
 <link href="http://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css">
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap.css">
 <!-- Scripts -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/indexScript.js"></script>
+<script type="text/javascript" src="/js/indexScript.js"></script>
 <script src="cssmenu/nav_script.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -186,9 +186,9 @@ $deviceTools = new DeviceTools();
             <!--- Article --->
             <p>
             <?php    
-                //Set header and article depending on selected name.
-                //If the page has refreshed and a device has not been
-                //set trough the form, check if a former device was selected.
+                /*Set header and article depending on selected name.
+                If the page has refreshed and a device has not been
+                set trough the form, check if a former device was selected.*/
                 if (isset($_POST['selectedName']) ) {
                     echo "<h1 id='articleHeader'><b>" ;
                     echo str_replace("_", " ", $_POST['selectedName'] . "</b></h1>");
@@ -217,7 +217,6 @@ $deviceTools = new DeviceTools();
         <?php
             if (isset($_POST['selectedName']) && $deviceTools->getCategory($_POST['selectedName'])!=="home"){
                 echo "<a href='test.xml' download>DOWNLOAD XML</a>";
-                //echo "<p>Posted by: " . $deviceTools->getAuthor($_POST['selectedName']) . "<br>Footer inserted by Jonathan Ariga</p>";
             }
         ?>
     </footer>  
@@ -225,14 +224,14 @@ $deviceTools = new DeviceTools();
 
     <?php  
         if (isset($_POST['selectedName']) ) {
-            /* create a dom document with encoding utf8 */
+            // Create a dom document with encoding utf8
 
 
-            // load the document
-            // the root node is <info/> so we load it into $info
+            // Load the document
+            // The root node is <info/> so we load it into $info
             $info = simplexml_load_file('test.xml');
 
-            // update
+            // Update
             $info->device->subject = $_POST['selectedName'];
             $info->device->article = strip_tags($deviceTools->getArticle($_POST['selectedName']));
 
@@ -242,7 +241,6 @@ $deviceTools = new DeviceTools();
 
             // save the updated document
             $info->asXML('test.xml');
-            //readfile('test.xml');
         }
     ?>
     
